@@ -5,5 +5,13 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  # - title: "אתרים-צפון"
+  #   url: /north-sites/
   - title: "About"
     url: /about/
+
+sb:
+  - title: אתרים
+    children:
+      - title: צפון
+        url: /north-sites/
