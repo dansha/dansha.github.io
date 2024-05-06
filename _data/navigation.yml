@@ -19,3 +19,5 @@ sb:
         url: /jeru/
       - title: דרום
         url: /south/
+      - title: test
+        url: /test
