@@ -1,0 +1,37 @@
+---
+layout: single
+classes: wide
+author_profile: true
+---
+<table>
+    <tr>
+        <th>שם</th>
+        <th>פתיחה</th>
+        <th>סגירה</th>
+        <th>תיאום</th>
+        <th>תשלום</th>
+        <th>טלפון</th>
+        <th></th>
+    </tr>
+
+{% assign siteData = site.data[page.dataFileName]  %}
+{% assign siteDataSorted = siteData | sort: "order" %}
+{% for sd in siteDataSorted %}
+<tr>
+    <td>{{ sd.name }}</td>
+    <td>{{ sd.open }}</td>
+    <td>{{ sd.close }}</td>
+    <td>{{ sd.coordination }}</td>
+    {% assign payment =sd.payment|strip %}
+    <td> {% if payment =="כן"   %}
+        {{ sd.payment }}
+        {% else %}
+        <a href={{ sd.payment }} target="_blank">לתשלום </a> 
+        {% endif%}
+        </td>
+    <td> <a href=tel:{{ sd.tel }} >{{ sd.tel }} </a> </td>
+    <td><a href={{ sd.site }} target="_blank">לאתר </a> </td>
+</tr>
+{% endfor %}
+
+</table>
