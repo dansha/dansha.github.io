@@ -5,7 +5,13 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
+  - title: "לו״ז"
+    url: /time/
+  - title: "צמחי א״י"
+    url: /fauna/
+  - title: "דור גבורה"
+    url: /gvora/
+  - title: "אודות"
     url: /about/
 
 sb:
