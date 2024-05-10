@@ -23,7 +23,7 @@ author_profile: true
     <td>{{ sd.close }}</td>
     <td>{{ sd.coordination }}</td>
     {% assign payment =sd.payment|strip %}
-    <td> {% if payment =="כן"   %}
+    <td> {% if payment =="לא" or payment=="כן"   %}
         {{ sd.payment }}
         {% else %}
         <a href={{ sd.payment }} target="_blank">לתשלום </a> 
