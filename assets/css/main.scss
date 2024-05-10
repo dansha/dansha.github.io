@@ -60,6 +60,7 @@ search: false
     outline : 1px dotted #000;
   }
 
+
   .tree li::after,
 .tree summary::before{
   content       : '';
@@ -95,6 +96,10 @@ search: false
     width: 600px;
     text-align: end;
     padding: 5px;
+  }
+
+  .era {
+    margin-left:28px;
   }
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

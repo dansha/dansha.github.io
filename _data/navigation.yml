@@ -1,11 +1,11 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "לו״ז"
+#  - title: "Posts"
+#    url: /posts/
+#  - title: "Categories"
+#    url: /categories/
+#  - title: "Tags"
+#    url: /tags/
+  - title: "סרגל תקופות"
     url: /time/
   - title: "צמחי א״י"
     url: /fauna/
@@ -25,5 +25,3 @@ sb:
         url: /jeru/
       - title: דרום
         url: /south/
-      - title: test
-        url: /test

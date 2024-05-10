@@ -1,0 +1,49 @@
+---
+layout: single
+classes: wide
+author_profile: true
+---
+
+
+<ul class="tree">
+    <li>
+        <details open>
+            <summary>תקופות</summary>
+            <ul>
+                {% assign level=0 %}
+                {% for row in site.data.events  %}
+                {% if row.era  %}
+                    {% if level==1 %}
+                        {% comment %} already in era-close previous era {% endcomment%}
+                    </ul>
+                    </details>
+                    </li>
+                    {% assign level=0 %}
+                    {% endif%}
+                    {% comment %} not in era -  open new era {% endcomment%}
+                    <li>
+                        <details  >
+                          <summary>
+                            <div class="container era">
+                                <div class="year">{{row.era_from}}</div>
+                                <div class="year">{{row.era_to}}</div>
+                                <div class="text">{{row.era}}</div>
+                            </div>
+                            </summary>
+                          <ul>
+                    {% assign level=1 %}
+                {% else %}
+                    {% comment %}not in era - show event {% endcomment%}
+                    <li>
+                        <div class="container">
+                            <div class="year">{{row.event_from}}</div>
+                            <div class="year">{{row.event_to}}</div>
+                            <div class="text">{{row.event}}</div>
+                        </div>
+                      </li>
+                {% endif%}
+                {% endfor %}
+            </ul>
+        </details>  
+    </li>
+</ul>
