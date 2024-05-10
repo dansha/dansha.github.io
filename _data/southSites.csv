@@ -4,4 +4,5 @@ order,name,open,close,coordination,payment,tel,site
 30,מרכז מבקרים מפעלי ים המלח,10:00,16:00,כן,https://www.deadseanovo.co.il/product/ticket/,08-3009199,https://www.deadseanovo.co.il/
 40,הר סדום- שביל הדגים,,,לא,לא,,https://www.parks.org.il/trip/%D7%A9%D7%91%D7%99%D7%9C-%D7%94%D7%93%D7%92%D7%99%D7%9D-%D7%91%D7%94%D7%A8-%D7%A1%D7%93%D7%95%D7%9D/ֿ
 50,עין בוקק,,,לא,לא,,https://www.parks.org.il/trip/bokek-river/
-60,גן לאומי קומראן,08:00,17:00,כן,כן,02-9942235,https://www.parks.org.il/reserve-park/%D7%A4%D7%90%D7%A8%D7%A7-%D7%92%D7%9F-%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%A7%D7%95%D7%9E%D7%A8%D7%90%D7%9F/
+60,גן לאומי קומראן,08:00,17:00,לא,כן,02-9942235,https://www.parks.org.il/reserve-park/%D7%A4%D7%90%D7%A8%D7%A7-%D7%92%D7%9F-%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%A7%D7%95%D7%9E%D7%A8%D7%90%D7%9F/
+70,גן לאומי מצדה,08:00,17:00,לא,כן,08-9959333,https://www.parks.org.il/reserve-park/%D7%92%D7%9F-%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%9E%D7%A6%D7%93%D7%94/
