@@ -7,7 +7,7 @@ author_profile: true
     {% for image in site.static_files %}
     {% if image.path contains page.data_folder %}
         <img 
-            src="{{ site.baseurl }}{{ image.path }}" alt="image" style="padding-top: 20px; width:90%;" />
+            src="{{ site.baseurl }}{{ image.path }}" alt="image" style="padding-top: 20px; width:70%;" />
     {% endif %}
 {% endfor %}
 </div>
