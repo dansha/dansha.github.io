@@ -4,6 +4,23 @@ classes: wide
 author_profile: true
 ---
 
+<script>
+    function toggleEvent(cl) {
+        [].forEach.call(document.querySelectorAll('.'+cl), function (el) {
+            if (el.style.display==="none"){
+                el.style.display="flex";
+            } else {
+                el.style.display="none";
+            }
+  });
+}
+</script>
+
+<button type="button" onclick="toggleEvent('level-1')">1</button>
+<button type="button" onclick="toggleEvent('level-2')">2</button>
+<button type="button" onclick="toggleEvent('level-3')">3</button>
+<button type="button" onclick="toggleEvent('crist')">נצרות</button>
+<button type="button" onclick="toggleEvent('zion')">ציונות</button>
 
 <ul class="tree">
     <li>
@@ -35,7 +52,7 @@ author_profile: true
                 {% else %}
                     {% comment %}not in era - show event {% endcomment%}
                     <li>
-                        <div class="container">
+                        <div class= 'container {{row.tags}}'>
                             <div class="year">{{row.event_from}}</div>
                             <div class="year">{{row.event_to}}</div>
                             <div class="text">{{row.event}}</div>
