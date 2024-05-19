@@ -6,6 +6,8 @@ search: false
 @charset "utf-8";
 
 
+
+
 .tree{
     --spacing : 1.5rem;
     --radius  : 10px;
@@ -100,6 +102,20 @@ search: false
 
   .era {
     margin-left:28px;
+  }
+
+  .tz-layout-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+  .tz-layout-levels-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btns button{
+    color:red;
   }
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

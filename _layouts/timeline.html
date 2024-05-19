@@ -6,61 +6,72 @@ author_profile: true
 
 <script>
     function toggleEvent(cl) {
+        console.log("kuku " + cl);
         [].forEach.call(document.querySelectorAll('.'+cl), function (el) {
             if (el.style.display==="none"){
                 el.style.display="flex";
+                
+                document.getElementById(cl).style.color = "red";
             } else {
                 el.style.display="none";
+                document.getElementById(cl).style.color = "black";
             }
   });
 }
 </script>
 
-<button type="button" onclick="toggleEvent('level-1')">1</button>
-<button type="button" onclick="toggleEvent('level-2')">2</button>
-<button type="button" onclick="toggleEvent('level-3')">3</button>
-<button type="button" onclick="toggleEvent('crist')">נצרות</button>
-<button type="button" onclick="toggleEvent('zion')">ציונות</button>
+<div class="btns">
+    <button id="crist" type="button" onclick="toggleEvent(this.id)">נצרות</button>
+    <button id="musl" type="button" onclick="toggleEvent(this.id)">איסלאם</button>
+    <button id="zion" type="button" onclick="toggleEvent(this.id)">ציונות</button>
+</div>
 
-<ul class="tree">
-    <li>
-        <details open>
-            <summary>תקופות</summary>
-            <ul>
-                {% assign level=0 %}
-                {% for row in site.data.events  %}
-                {% if row.era  %}
-                    {% if level==1 %}
-                        {% comment %} already in era-close previous era {% endcomment%}
-                    </ul>
-                    </details>
-                    </li>
+<div class="tz-layout-container btns">
+    <div class="tz-layout-levels-container">
+        <button id="level-1" type="button" onclick="toggleEvent(this.id)">1</button>
+        <button id="level-2" type="button" onclick="toggleEvent(this.id)">2</button>
+        <button id="level-3" type="button" onclick="toggleEvent(this.id)">3</button>
+    </div>
+    <ul class="tree">
+        <li>
+            <details open>
+                <summary>תקופות</summary>
+                <ul>
                     {% assign level=0 %}
-                    {% endif%}
-                    {% comment %} not in era -  open new era {% endcomment%}
-                    <li>
-                        <details  >
-                          <summary>
-                            <div class="container era">
-                                <div class="year">{{row.era_from}}</div>
-                                <div class="year">{{row.era_to}}</div>
-                                <div class="text">{{row.era}}</div>
+                    {% for row in site.data.events  %}
+                    {% if row.era  %}
+                        {% if level==1 %}
+                            {% comment %} already in era-close previous era {% endcomment%}
+                        </ul>
+                        </details>
+                        </li>
+                        {% assign level=0 %}
+                        {% endif%}
+                        {% comment %} not in era -  open new era {% endcomment%}
+                        <li>
+                            <details  >
+                            <summary>
+                                <div class="container era">
+                                    <div class="year">{{row.era_from}}</div>
+                                    <div class="year">{{row.era_to}}</div>
+                                    <div class="text">{{row.era}}</div>
+                                </div>
+                                </summary>
+                            <ul>
+                        {% assign level=1 %}
+                    {% else %}
+                        {% comment %}not in era - show event {% endcomment%}
+                        <li>
+                            <div class= 'container {{row.tags}}'>
+                                <div class="year">{{row.event_from}}</div>
+                                <div class="year">{{row.event_to}}</div>
+                                <div class="text">{{row.event}}</div>
                             </div>
-                            </summary>
-                          <ul>
-                    {% assign level=1 %}
-                {% else %}
-                    {% comment %}not in era - show event {% endcomment%}
-                    <li>
-                        <div class= 'container {{row.tags}}'>
-                            <div class="year">{{row.event_from}}</div>
-                            <div class="year">{{row.event_to}}</div>
-                            <div class="text">{{row.event}}</div>
-                        </div>
-                      </li>
-                {% endif%}
-                {% endfor %}
-            </ul>
-        </details>  
-    </li>
-</ul>
+                        </li>
+                    {% endif%}
+                    {% endfor %}
+                </ul>
+            </details>  
+        </li>
+    </ul>
+</div>
